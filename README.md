@@ -13,7 +13,7 @@
 
 ## 📸 Screenshots
 
-![AlgoViz Screenshot](img/Screenshot%202024-12-10%20121111.png)
+![AlgoViz Screenshot](img/AlgoViz.png)
 
 ## 🚀 Algorithms Implemented
 
