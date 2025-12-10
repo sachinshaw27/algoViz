@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Sorting Visualizer</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Pacifico&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/index.css">
+</head>
+
+<body>
+	<div class="header">
+		<div class="title-container">
+			<h1>Algo<span class="highlight">Viz</span></h1>
+		</div>
+
+		<div class="controls">
+			<div class="input-group">
+				<div class="slide-container">
+					<label for="bars">Array Size</label>
+					<input id="bars" type="range" name="bars" min="1" max="100" value="50" oninput="setup()"
+						onchange="setup()">
+					<span id="b" class="value-display"></span>
+				</div>
+				<div class="slide-container">
+					<label for="delay">Speed</label>
+					<input id="delay" type="range" name="delay" min="0" max="1000" value="25" oninput="setup()"
+						onchange="setup()">
+					<span id="d" class="value-display"></span>
+				</div>
+			</div>
+
+			<div class="buttons-group">
+				<button onclick="SelectionSort()">Selection Sort</button>
+				<button onclick="BubbleSort()">Bubble Sort</button>
+				<button onclick="InsertionSort()">Insertion Sort</button>
+				<button onclick="MergeSort()">Merge Sort</button>
+				<button onclick="QuickSort()">Quick Sort</button>
+				<button onclick="HeapSort()">Heap Sort</button>
+			</div>
+
+			<div class="input-group search-group">
+				<input type="number" id="targetValue" placeholder="Target"
+					style="width: 70px; padding: 5px; border-radius: 5px; border:none;">
+				<button onclick="LinearSearch()">Linear Search</button>
+				<button onclick="BinarySearch()">Binary Search</button>
+			</div>
+
+			<div class="action-group">
+				<button class="generate-btn" onclick="reset()">Generate New Array</button>
+			</div>
+		</div>
+		<div id="status-text"></div>
+	</div>
+
+	<div id="container">
+	</div>
+
+	<script src="App/beep.js"></script>
+	<script src="App/script.js"></script>
+</body>
+
+</html>
